@@ -1,5 +1,4 @@
 FROM thelayias/ubuntu-customizado:latest
-COPY ./ ./
-RUN mvn clean package
+COPY target/demo-0.0.1-SNAPSHOT.jar /docker-spring-boot.jar
 # set the startup command to execute the jar
-CMD ["java", "-jar", "target/docker-spring-boot.jar"]
+CMD ["java", "-jar", "docker-spring-boot.jar"]
